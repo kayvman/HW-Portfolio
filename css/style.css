@@ -48,8 +48,8 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
    Links
    ========================================================================== */
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
+a { color: white; }
+a:visited { color: white; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
@@ -223,17 +223,33 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
     ALL: Orange Theme
    =================== */
 
-#header-container{ border-bottom: 20px solid #608341; }
-#footer-container{ border-top:    20px solid #608341; }
-#main aside      { border-top:    20px solid #608341; }
+#header-container{ border-bottom: 20px solid #660000;
+							background-color:#003300;
+						}
+#footer-container{ border-top:    20px solid #608341;
+							background-color:#BCED91;
+							}
+#main aside      { width:30%;border-top: 20px solid #608341;
+						background-color:#003300;float:right;
+						}
+	
 
-#header-container{background-color:#BCED91;}
-#footer-container{background-color:#BCED91;}
-#main aside{
-	background-color:#BCED91;
+#title{ color:#CDCDCD;
+	font-size:45px;
+line-height:45px;	
 }
 
-#title{ color:#608341; }
+#aside_butt{
+	width:100%;
+	background-color:black;
+	
+	}
+h2 {
+color:#CDCDCD;
+font-size:25px;
+
+
+}
 
 ::-moz-selection { background: #f16529; color: #fff; text-shadow: none; }
 ::selection      { background: #f16529; color: #fff; text-shadow: none; }
@@ -245,23 +261,29 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 nav a{
 	display:block;
 	margin-bottom:10px;
+	margin-top:10px;
 	padding:15px 0;
+	-webkit-border-top-left-radius: 20px;
+	-moz-border-radius-topleft: 20px;
+	border-radius-topleft: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-moz-border-radius-topright: 20px;
+	border-radius-topright: 20px;
 
-	background:#608341;
+	background:#660000;
 	color:white;
 
 	text-align:center;
 	text-decoration:none;
 	font-weight:bold;
-}
-
-nav a:hover, nav a:visited{
-	color:white;
+	
 }
 
 nav a:hover{
 	text-decoration:underline;
+	background:#CD0000;
 }
+
 
 
 
@@ -280,13 +302,108 @@ nav a:hover{
 #main aside{
 	color:#608341;
 	padding:0px 5% 10px;
-	width:300px;
+	width:90%;
+	margin-bottom:10px;
 }
 
 #footer-container footer{
 	color:#608341;
 	padding:20px 0;
 }
+#aside_butt{
+	width:100%;
+	background-color:black;
+		
+	}
+	
+	.container button {
+		font-size: 19px;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		padding: 5px;
+		background: #660000;
+		color: #fff;
+		border: 1px solid #000;
+		margin-top:15px;
+		margin-left:auto;
+		margin-right:auto;
+		width:100%;
+	}
+
+	#aside button {
+		-webkit-transition: background 0.8s ease;
+		-moz-transition: background 0.8s ease;
+		transition: background 0.5s ease;
+		
+	}
+	
+	#aside button:hover {
+
+		background: #608341;
+		
+
+	}
+	
+	@-webkit-keyframes fadein {
+
+		from { opacity: 0; }
+		to { opacity: 1; }
+
+	}
+	
+	@-webkit-keyframes slider {
+    from{ width:0%; }
+    to { width:100%; }
+    
+	}
+	
+	.fadein{
+
+		-webkit-animation-name: fadein;
+		-webkit-animation-duration: 2s;
+		-webkit-animation-timing-function: ease-in;
+		-webkit-animation-delay: 0s;
+		-webkit-animation-direction: alternate;
+		-moz-animation-name: fadein;
+		-moz-animation-duration: 2s;
+		-moz-animation-timing-function: ease-in;
+		-moz-animation-delay: 0s;
+		-moz-animation-direction: alternate;
+
+	}
+	
+	.fadein_faster{
+
+		-webkit-animation-name: fadein;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-timing-function: ease-in;
+		-webkit-animation-delay: 0s;
+		-webkit-animation-direction: alternate;
+		-moz-animation-name: fadein;
+		-moz-animation-duration: 1s;
+		-moz-animation-timing-function: ease-in;
+		-moz-animation-delay: 0s;
+		-moz-animation-direction: alternate;
+
+	}
+	
+	.slider{
+
+		-webkit-animation-name: slider;
+		-webkit-animation-duration: .3s;
+		-webkit-animation-timing-function: ease-in;
+		-webkit-animation-delay: 0s;
+		-webkit-animation-direction: normal;
+		-moz-animation-name: slider;
+		-moz-animation-duration: .3s;
+		-moz-animation-timing-function: ease-in;
+		-moz-animation-delay: 0s;
+		-moz-animation-direction: normal;
+
+	}
+
+
 
 /* ===============
     ALL: IE Fixes
@@ -339,6 +456,33 @@ nav a:hover{
 		margin:0 1.7%;
 		padding:25px 2%;
 		margin-bottom:0;
+		
+	}
+	
+	#aside_nav{
+	margin-bottom:15px;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	padding:15px 0;
+	padding-bottom:15px;
+	background:#black;
+	text-align:justify;
+	font-weight:bold;
+	
+	}
+	
+
+	
+	
+	#main aside{
+		float:right;
+		width:50%;
+		margin-bottom:25px;
+		margin-left:15px;
+		-webkit-box-shadow:0 5px 10px #aaa;
+		   -moz-box-shadow:0 5px 10px #aaa;
+		        box-shadow:0 5px 10px #aaa;
 	}
 	
 	nav li:first-child a{ margin-left:0;  }
@@ -374,7 +518,7 @@ nav a:hover{
    ============ */
 	
 	#title{
-		float:left;
+		
 	}
 
 	nav{
@@ -394,7 +538,36 @@ nav a:hover{
 	#main aside{
 		float:right;
 		width:28%;
+		
 	}
+	
+	#aside_nav{
+	margin-bottom:5px;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	padding:15px 0;
+	background-color:#003300;
+	text-align:justify;
+	font-weight:bold;
+	
+	}
+	
+	.container button {
+		
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		padding: 5px
+		background: #E01B6A;
+		color: #fff;
+		border: 1px solid #000;
+		margin-top:15px;
+		
+	}
+	
+	
+
 }
 
 @media only screen and (min-width: 1140px) {
@@ -407,6 +580,19 @@ nav a:hover{
 		width:1026px; /* 1140px - 10% for margins */
 		margin:0 auto;
 	}
+	
+	.container button {
+		font-size: 19px;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+		padding: 5px;
+		background: #660000;
+		color: #fff;
+		border: 1px solid #000;
+		margin-top:15px;
+		width:32%;
+	}
 }
 
 
@@ -417,7 +603,7 @@ nav a:hover{
  
 @media print {
   * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
-  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a, a:visited { color: white !important; text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
